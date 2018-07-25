@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+</head>
+<body>
+       <nav>
+          <div class="icon">
+           <i class="fas fa-bars"></i>
+           </div>
+           <div class="name"><a href="#name">Michał Kowalczyk</a></div>
+           <ul>
+               <li><a href="#about">About Me</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#hire">Hire Me</a></li>
+           </ul>
+           
+       </nav>
+    <header id="name">
+       <img src="https://image.freepik.com/free-vector/calligraphic-writing-hello_1020-450.jpg" alt="hello">
+       <div class="content">
+                <h1>Nice to have you here!</h1>
+                <p>I'm Michal, beginner web developer. Take a look at my site.</p>
+            </div>
+   </header>
+    <main>
+        <section id="about">
+            <div data-aos="fade-up" class="content">
+                <h1>About me</h1>
+                <p>I'm I am absorbed in creating websites. My adventure with web develpment started this year. Now I'm looking for a front-end developer job to boost my progress and take it to proficiency level.</p>
+            </div>
+            <img src="https://image.freepik.com/free-vector/webinar-concept-with-man-on-desk_23-2147765647.jpg" data-aos="fade-up" alt="desk">
+        </section>
+        <section id="skills">
+            <img src="https://image.freepik.com/free-vector/great-isometric-user-experience_23-2147546971.jpg" data-aos="fade-up" alt="web">
+            <div class="content" data-aos="fade-up">
+                <h1>Skills</h1>
+                <ul>
+                    <li><i class="fab fa-html5"></i>HTML5 - good</li>
+                    <li><i class="fab fa-css3-alt"></i>CSS3 - good</li>
+                    <li><i class="fab fa-js"></i>JavaScript - basics</li>
+                    <li><i class="fas fa-wrench"></i>jQuery - basics</li>
+                    <li><i class="fas fa-paint-brush"></i>Adobe Photoshop - basics</li>
+                    <li><i class="fas fa-mobile"></i>RWD - basics</li>
+                </ul>
+                <p>I'm constantly working on my skills. I'm willing to learn one of main frameworks, css preprocesors and aiming for my code to be clean.</p>
+            </div>
+            
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project-wrap">
+                <a href="https://majkal.github.io/Mondrian/" target="_blank"><div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="mondrian.PNG">
+                    <div class="project-description">
+                    <h2>Mondrian</h2>
+                    <p>Combination of CSS Grid and Mondrian's most recognizable work.</p>
+                    </div>
+                </div>
+                </a>
+                <a href="https://majkal.github.io/Ocean/" target="_blank">
+                   <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="ocean.PNG">
+                    <div class="project-description">
+                    <h2>Ocean's depth</h2>
+                    <p>Mobile first approach. Presentation of the depth of the ocean.</p>
+                    </div>
+                </div>
+                </a>
+                <a href="https://majkal.github.io/DownloadApp/" target="_blank"><div class="project-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="swapp.PNG">
+                    <div class="project-description">
+                    <h2>Swapp</h2>
+                    <p>Landing Page, call to action. </p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <a class="github" href="www.github.com">Visit my github profile <i class="fab fa-github"></i></a>
+        </section>
+        <section id="hire">
+            
+            <div class="content" data-aos="fade-up">
+                <h1>Let's get in touch</h1>
+                <p>Send me an e-mail for my CV. I look forward to cooperate.</p>
+                <a href="mailto:m5kowalczyk@yahoo.com">Email Me!</a>  
+            </div>
+            <img src="https://image.freepik.com/free-vector/hand-holding-a-mobile-phone-with-an-email-on-the-screen_1223-1.jpg" alt="email" data-aos="fade-up">
+        </section>
+    </main>
+    <footer>
+        All graphics from <a href="https://www.freepik.com">freepik.com</a>
+    </footer>
+    <script>
+        //show animation
+        AOS.init({
+            delay: 500,
+        });
+        
+        // scroll function
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+        
+        //nav rwd toggle
+        
+        $(document).ready(function(){
+            $(".icon").on("click", function(){
+                $("nav ul").slideToggle("rwd");
+            })
+        })
+        
+        
+    </script>
+</body>
+</html>
